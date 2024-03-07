@@ -11,5 +11,4 @@ for i in range(3,100)
         else
             flag = false
         end
-    print(RoundUp(sqrt(i-1)),1)
 end

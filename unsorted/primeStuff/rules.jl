@@ -33,4 +33,7 @@ function generateCA(ruleNumber, generations, width)
 end
 
 # Example usage: Rule 30 for 40 generations with a width of 50 cells
-generateCA(31, 40, 50)
+ 
+for i in 1:10
+    generateCA(i, 40, 50)
+end

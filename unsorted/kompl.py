@@ -28,7 +28,6 @@ X_kkonjugert = np.fft.fft(x_kkonjugert)
 X_kkonjugert_storrelse = np.abs(X_kkonjugert / L)
 X_kkonjugert_storrelse[1:L//2] *= 2
 
-ckrack passowrd go
 plt.figure(figsize=(18, 6))
 
 

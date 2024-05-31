@@ -1,8 +1,8 @@
-Overarching goal: Simulate and visualize a complex system in two dimentions
+> Overarching goal: Simulate and visualize a complex system in two dimentions
 
 Delmål:
 
-- En agen som beveger seg tilfeldig rundt
+- En agent som beveger seg tilfeldig rundt
 - Mat som genereres tilfeldig og blir spist av agenten hvis han går over de
 
 

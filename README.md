@@ -9,8 +9,6 @@
     <small>Informing and improving decitionmaking</small>
 </h1>
 
-![Example Image](logo/lambdasimWallpaper-min.png)
-
 🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in order to make better decitions, 
 
 <!-- 🌱 It starts simply with an agent moving randomly and eating randomly generated food, laying the foundation for emergent complexity. -->

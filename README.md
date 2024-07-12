@@ -1,11 +1,21 @@
+<h1 align="center">
+    <a href="">
+        <picture>
+          <source media="(prefers-color-scheme: dark)">
+          <img alt="Lambdasim logo" src="logo/lambdasimWallpaper-min.png" width="500">
+        </picture>
+    </a>
+    <br>
+    <small>A project </small>
+</h1>
+
 ![Example Image](logo/lambdasimWallpaper-min.png)
 
-🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in two dimensions, 
-aspiring to one day make a meaningful contribution to the feild of complexity theory.  
+🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in order to make better decitions, 
 
-🌱 It starts simply with an agent moving randomly and eating randomly generated food, laying the foundation for emergent complexity.
+<!-- 🌱 It starts simply with an agent moving randomly and eating randomly generated food, laying the foundation for emergent complexity. -->
 
-👥 This project serves as a pringboard to my next project where the goal is to simulate mechanisms in society. 
+👥 This repository serves as a starting point of my next bit project where the goal is to simulate mechanisms in society. 
 🏙️ I.e. testing various economic/political models on simulated "agents" and comparing results etc.
 
 🎨The simulation seeks to be both visually captivating and informative, 

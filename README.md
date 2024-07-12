@@ -6,7 +6,7 @@
         </picture>
     </a>
     <br>
-    <small>A project </small>
+    <small>Informing and improving decitionmaking</small>
 </h1>
 
 ![Example Image](logo/lambdasimWallpaper-min.png)

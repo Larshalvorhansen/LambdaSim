@@ -1,3 +1,5 @@
+![Example Image](https://www.google.com/url?sa=i&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F364625%2Fhalf-life-lambda&psig=AOvVaw1f14JhaUPj4vCrHv-8Dhtd&ust=1720880374050000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPC044zZoYcDFQAAAAAdAAAAABAE)
+
 🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in two dimensions, 
 aspiring to one day make a meaningful contribution to the feild of complexity theory.  
 

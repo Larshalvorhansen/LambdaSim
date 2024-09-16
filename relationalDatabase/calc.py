@@ -22,5 +22,6 @@ def main():
     #allComm = convertToArray("allCommodities")
     #print(averageArray(allComm))
     print("test")
+    
 if __name__ == "__main__":
     main()

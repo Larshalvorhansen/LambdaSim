@@ -8,23 +8,19 @@ def convertToArray(csvFile):
         for row in csvreader:
             myArray.append(row)
         return myArray
-
 def convertFromArrayWithToupleToList(array):
     newArray
     for i in array:
-         += 
+        pass
     return newArray
-
 def averageArray(array):
     sum = 0
     for i in array:
         sum += float(i[1])
     return sum / len(array)
-
 def main():
-    allComm = convertToArray("allCommodities")
-    print(averageArray(allComm))
-
+    #allComm = convertToArray("allCommodities")
+    #print(averageArray(allComm))
+    print("test")
 if __name__ == "__main__":
     main()
-

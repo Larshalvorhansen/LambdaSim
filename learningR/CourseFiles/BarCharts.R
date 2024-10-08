@@ -34,3 +34,4 @@ dev.off()  # But only if there IS a plot
 cat("\014")  # ctrl+L
 
 # Clear mind :)
+

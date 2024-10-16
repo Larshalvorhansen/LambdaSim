@@ -1,3 +1,5 @@
+# Plan V1
+
 > Overarching goal: Simulate and visualize a complex system in two dimentions
 
 Delmål:

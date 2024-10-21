@@ -9,7 +9,7 @@
     <small>Informing and improving decitionmaking</small>
 </h1>
 
-🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in order to make better decitions.
+🌐 This GitHub project is (currently) a solo venture aimed at simulating and visualizing complex systems in order to make better decisions.
 
 <!-- 🌱 It starts simply with an agent moving randomly and eating randomly generated food, laying the foundation for emergent complexity. -->
 
@@ -25,7 +25,7 @@ and aims to ignite a passion for complex adaptive systems.
 🤝Feel free to reach out if you wish to collaborate, give feedback, or explore this project together with me! 
 
 
-Here is the tree structure of this project as of 16.10.2024:
+Here is a tree structure of this project as of 16.10.2024:
 ```plaintext
 ├── approachUsingCellularAutomata
 │   ├── circleEatingFood.py

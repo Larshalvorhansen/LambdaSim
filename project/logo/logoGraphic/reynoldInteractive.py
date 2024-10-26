@@ -6,7 +6,7 @@ import math
 # Initialize Pygame and Pygame GUI
 pygame.init()
 pygame.display.set_caption('Boids Simulation with Background Interaction')
-WIDTH, HEIGHT = 800, 600
+WIDTH, HEIGHT = 1200, 900
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
@@ -14,14 +14,19 @@ clock = pygame.time.Clock()
 manager = pygame_gui.UIManager((WIDTH, HEIGHT))
 
 # Define colors
-BLACK = (0, 0, 0)
-WHITE = (255, 255, 255)
+BLACK = (200, 200, 200)
+WHITE = (100, 100, 100)
 
 # Load background image (with transparency)
-background_image = pygame.image.load('pngSommerfugl.png').convert_alpha()
+background_image = pygame.image.load('lambdaMedium.png').convert_alpha()
+bg_width, bg_height = background_image.get_size()
+
+# Calculate the position to center the image
+bg_x = (WIDTH - bg_width) // 2
+bg_y = (HEIGHT - bg_height) // 2
 
 # Boid parameters (set initial values)
-NUM_BOIDS = 100
+NUM_BOIDS = 500
 MAX_SPEED = 4
 MAX_FORCE = 0.1
 SEPARATION_RADIUS = 25
@@ -59,6 +64,7 @@ class Boid:
         self.position = pygame.Vector2(random.uniform(0, WIDTH), random.uniform(0, HEIGHT))
         self.velocity = pygame.Vector2(random.uniform(-2, 2), random.uniform(-2, 2))
         self.acceleration = pygame.Vector2(0, 0)
+        self.color = WHITE  # Default color is white
     
     def edges(self):
         """Wrap around the screen if the boid goes off the edges."""
@@ -74,7 +80,8 @@ class Boid:
     def update(self):
         """Update position, velocity, and reset acceleration."""
         self.velocity += self.acceleration
-        self.velocity = self.velocity.normalize() * min(MAX_SPEED, self.velocity.length())
+        if self.velocity.length() > 0:  # Check if velocity is non-zero before normalizing
+            self.velocity = self.velocity.normalize() * min(MAX_SPEED, self.velocity.length())
         self.position += self.velocity
         self.acceleration *= 0
     
@@ -93,7 +100,8 @@ class Boid:
             steer /= total
             if steer.length() > 0:
                 steer = steer.normalize() * MAX_SPEED - self.velocity
-                steer = steer.normalize() * min(MAX_FORCE, steer.length())
+                if steer.length() > 0:
+                    steer = steer.normalize() * min(MAX_FORCE, steer.length())
         return steer
 
     def alignment(self, boids):
@@ -106,10 +114,12 @@ class Boid:
                 total += 1
         if total > 0:
             avg_velocity /= total
-            avg_velocity = (avg_velocity.normalize()) * MAX_SPEED
-            steer = avg_velocity - self.velocity
-            steer = steer.normalize() * min(MAX_FORCE, steer.length())
-            return steer
+            if avg_velocity.length() > 0:  # Check if avg_velocity is non-zero
+                avg_velocity = avg_velocity.normalize() * MAX_SPEED
+                steer = avg_velocity - self.velocity
+                if steer.length() > 0:  # Check if steer is non-zero
+                    steer = steer.normalize() * min(MAX_FORCE, steer.length())
+                return steer
         return pygame.Vector2(0, 0)
     
     def cohesion(self, boids):
@@ -126,7 +136,8 @@ class Boid:
             if desired.length() > 0:
                 desired = desired.normalize() * MAX_SPEED
                 steer = desired - self.velocity
-                steer = steer.normalize() * min(MAX_FORCE, steer.length())
+                if steer.length() > 0:  # Check if steer is non-zero
+                    steer = steer.normalize() * min(MAX_FORCE, steer.length())
                 return steer
         return pygame.Vector2(0, 0)
     
@@ -141,11 +152,13 @@ class Boid:
         self.apply_force(alignment_force)
         self.apply_force(cohesion_force)
     
-    def interact_with_background(self, background):
+    def interact_with_background(self, background, bg_x, bg_y, bg_width, bg_height):
         """Check if the boid is on an opaque part of the background image."""
-        x, y = int(self.position.x), int(self.position.y)
-        if 0 <= x < WIDTH and 0 <= y < HEIGHT:
+        x, y = int(self.position.x - bg_x), int(self.position.y - bg_y)
+        if 0 <= x < bg_width and 0 <= y < bg_height:
             pixel = background.get_at((x, y))
+            # Check alpha channel (opacity) to see if boid overlaps with the image
+            self.color = BLACK if pixel[3] != 0 else WHITE  # Change to black if overlapping
             if pixel[3] != 0:  # Check alpha channel (opacity)
                 # Simple behavior: Stop the boid if it hits an opaque pixel
                 self.velocity *= 0
@@ -154,7 +167,8 @@ def main():
     global SEPARATION_RADIUS, ALIGNMENT_RADIUS, COHESION_RADIUS, MAX_SPEED, MAX_FORCE
 
     boids = [Boid() for _ in range(NUM_BOIDS)]
-    
+
+
     running = True
     while running:
         time_delta = clock.tick(60)/1000.0
@@ -174,15 +188,16 @@ def main():
         MAX_SPEED = speed_slider.get_current_value()
         MAX_FORCE = force_slider.get_current_value()
 
-        # Draw background
-        screen.blit(background_image, (0, 0))
+        # Draw background image centered
+        # screen.blit(background_image, (bg_x, bg_y))
 
         for boid in boids:
             boid.edges()
             boid.flock(boids)
             boid.update()
-            boid.interact_with_background(background_image)
-            pygame.draw.circle(screen, WHITE, (int(boid.position.x), int(boid.position.y)), 3)
+            boid.interact_with_background(background_image, bg_x, bg_y, bg_width, bg_height)
+            # Draw the boid with its current color
+            pygame.draw.circle(screen, boid.color, (int(boid.position.x), int(boid.position.y)), 5)
 
         manager.draw_ui(screen)
         pygame.display.flip()

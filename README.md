@@ -27,87 +27,95 @@ and aims to ignite a passion for complex adaptive systems.
 
 Here is a tree structure of this project as of 16.10.2024:
 ```plaintext
-├── approachUsingCellularAutomata
-│   ├── circleEatingFood.py
-│   ├── gameOfLife.py
-│   ├── gameOfLifeWithAgeColors.py
-│   └── redMovingCircle.py
-├── approachUsingModules
-│   ├── gui.jl
-│   ├── gui.py
-│   ├── hei.cpp
-│   ├── modsynth.cpp
-│   ├── rules.jl
-│   └── test.cpp
-├── blobEatingSim
-│   └── simple.py
+project
 ├── grassSim
-│   ├── agents.py
-│   ├── agents2.py
-│   ├── data
-│   │   ├── data0.csv
-│   │   ├── data1.csv
-│   │   ├── data2.csv
-│   │   ├── data3.csv
-│   │   └── data4.csv
 │   ├── enterprateData.py
+│   ├── writeRandomData.py
+│   ├── agents2.py
+│   ├── agents.py
 │   ├── p4e.py
-│   └── writeRandomData.py
+│   └── data
+│       ├── data3.csv
+│       ├── data2.csv
+│       ├── data0.csv
+│       ├── data1.csv
+│       └── data4.csv
+├── approachUsingModules
+│   ├── modsynth.cpp
+│   ├── gui.jl
+│   ├── test.cpp
+│   ├── hei.cpp
+│   ├── rules.jl
+│   └── gui.py
+├── other
+│   ├── snake.py
+│   ├── primeStuff
+│   │   ├── primtall.jl
+│   │   ├── test.py
+│   │   ├── prim.jl
+│   │   ├── rules.jl
+│   │   ├── primSoA.jl
+│   │   ├── prime.jl
+│   │   └── tempCodeRunnerFile.jl
+│   ├── m.py
+│   └── sinusPlot.py
+├── approachUsingCellularAutomata
+│   ├── redMovingCircle.py
+│   ├── gameOfLife.py
+│   ├── circleEatingFood.py
+│   └── gameOfLifeWithAgeColors.py
+├── relationalDatabase
+│   ├── README.md
+│   ├── calc.py
+│   └── commoditiesData
+│       ├── globalPriceOfOliveOilSeriesData.csv
+│       └── allCommodities.csv
 ├── learningR
 │   ├── CourseFiles
-│   │   ├── .Rapp.history
-│   │   ├── .RData
+│   │   ├── Plot.R
 │   │   ├── .Rhistory
 │   │   ├── Assignment_Datasets
-│   │   │   ├── import.csv
 │   │   │   ├── import.txt
-│   │   │   └── import.xlsx
-│   │   ├── BarCharts.R
+│   │   │   ├── import.xlsx
+│   │   │   └── import.csv
+│   │   ├── ImportingData_Datasets
+│   │   │   ├── mbb.xlsx
+│   │   │   ├── mbb.csv
+│   │   │   └── mbb.txt
+│   │   ├── Histograms.R
+│   │   ├── SelectingCases.R
+│   │   ├── RStudio.R
+│   │   ├── InstallingR.R
+│   │   ├── ImportingData.R
+│   │   ├── Packages.R
 │   │   ├── DataFormats.R
 │   │   ├── Describe.R
-│   │   ├── EnteringData.R
-│   │   ├── Factors.R
-│   │   ├── HierarchicalClustering.R
-│   │   ├── Histograms.R
-│   │   ├── ImportingData.R
-│   │   ├── ImportingData_Datasets
-│   │   │   ├── mbb.csv
-│   │   │   ├── mbb.txt
-│   │   │   └── mbb.xlsx
-│   │   ├── InstallingR.R
-│   │   ├── OverlayingPlots.R
-│   │   ├── Packages.R
-│   │   ├── Plot.R
-│   │   ├── PrincipalComponents.R
 │   │   ├── Regression.R
-│   │   ├── RStudio.R
 │   │   ├── Scatterplots.R
-│   │   ├── SelectingCases.R
-│   │   ├── Summary.R
+│   │   ├── EnteringData.R
+│   │   ├── _Exercise_Template.R
+│   │   ├── HierarchicalClustering.R
+│   │   ├── .RData
+│   │   ├── OverlayingPlots.R
+│   │   ├── .Rapp.history
+│   │   ├── BarCharts.R
+│   │   ├── Factors.R
 │   │   ├── Tidyverse.R
-│   │   └── _Exercise_Template.R
-│   ├── read.md
-│   └── test.r
+│   │   ├── Summary.R
+│   │   └── PrincipalComponents.R
+│   ├── test.r
+│   └── read.md
 ├── logo
+│   ├── SimProsjektLogo.png
+│   ├── smallLambda.png
+│   ├── logoGraphic
+│   │   ├── lambdaMedium.png
+│   │   ├── reynoldInteractive.py
+│   │   └── lambdasimPransparentLogo.png
 │   ├── lambdasimWallpaper-min.png
 │   ├── logoGeneratorSim.py
-│   ├── PixelnatorLogoSim.zip
-│   └── SimProsjektLogo.png
-├── other
-│   ├── m.py
-│   ├── primeStuff
-│   │   ├── prim.jl
-│   │   ├── prime.jl
-│   │   ├── primSoA.jl
-│   │   ├── primtall.jl
-│   │   ├── rules.jl
-│   │   ├── tempCodeRunnerFile.jl
-│   │   └── test.py
-│   ├── sinusPlot.py
-│   └── snake.py
-└── relationalDatabase
-    ├── calc.py
-    ├── commoditiesData
-    │   ├── allCommodities.csv
-    │   └── globalPriceOfOliveOilSeriesData.csv
-    └── README.md
+│   └── PixelnatorLogoSim.zip
+├── blobEatingSim
+│   └── simple.py
+└── learningNetlogo
+    └── first.nls

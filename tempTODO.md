@@ -1,5 +1,0 @@
-- Lese om netlogo
-- Progge litt netlogo
-- Følge opp remarkable2 tingen
-- Finne ut innen når jeg må få skrevet ting i gruppeprosjekter
-  - Plotte det inn i sheets

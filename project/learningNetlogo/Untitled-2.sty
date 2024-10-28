@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{mermaid}
+
+\begin{document}
+
+\title{Mermaid Diagram in LaTeX}
+\author{Your Name}
+\date{\today}
+
+\maketitle
+
+\section*{Mermaid Diagram Example}
+
+Below is a Mermaid diagram created in LaTeX:
+
+\begin{mermaid}
+%% Title: "The World"
+flowchart TB
+    %% Styles for boxes and arrows
+    classDef boxStyle fill:#f9f,stroke:#333,stroke-width:2px,rounded-corners
+
+    %% Define Nodes
+    World["The World"]:::boxStyle
+
+    %% Data Pipeline Branch
+    Pipeline["Data Pipeline"]:::boxStyle
+    Collection["Collection"]:::boxStyle
+    Cleaning["Cleaning"]:::boxStyle
+    Labeling["Labeling"]:::boxStyle
+    Organizing["Organizing"]:::boxStyle
+    Comparison["Comparison (optional feedback)"]:::boxStyle
+    Prediction["Model Prediction"]:::boxStyle
+
+    %% Model Branch
+    Model["Model"]:::boxStyle
+    Initial["Initial Observations"]:::boxStyle
+    Environment["Environment"]:::boxStyle
+    Execution["Execution"]:::boxStyle
+    Result["Result"]:::boxStyle
+
+    %% Define Connections
+    %% Arrows from World
+    World --> Pipeline
+    World --> Model
+
+    %% Arrows in Data Pipeline
+    Pipeline --> Collection
+    Collection --> Cleaning
+    Cleaning --> Labeling
+    Labeling --> Organizing
+    Organizing --> Comparison
+
+    %% Arrows in Model
+    Model --> Initial
+    Initial --> Environment
+    Environment --> Execution
+    Execution --> Result
+    Result --> Comparison
+
+    %% Arrow from Comparison to Prediction
+    Comparison --> Prediction
+
+    %% Optional Feedback Arrow
+    Comparison -.-> Pipeline
+\end{mermaid}
+
+\end{document}

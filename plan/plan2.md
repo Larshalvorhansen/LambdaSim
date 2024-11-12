@@ -24,3 +24,4 @@ Explore these resources:
 - Jhon Von Newman! Han er definitivt en kul ting
   - JVN dataarkitekturen og store "Contributions" til utviklingen av den moderne datamaskinen
   - Var med å starte ABM[Agent Based Modeling] feltet!
+- preditionPipelineDiagram is based on this: https://docs.google.com/presentation/d/116pnwXs2iNqT4Yu2ylG68kUDnGhzMqovaNMLAH4bnsA/edit?usp=sharing

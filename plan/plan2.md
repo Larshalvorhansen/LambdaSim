@@ -3,7 +3,7 @@
 ## Overarching objective: 
 Create a tool or gain the ability to improve dectitionmaking using agent based simulation
 ### Requirements: 
-1. Become an agent based modeling genius
+1. Learn more about agent based modeling
 2. Create or build upon an existing tool
     - Start by makeing simple agent based simulations in Netlogo
       - Write about them

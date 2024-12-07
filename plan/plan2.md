@@ -17,7 +17,6 @@ Explore these resources:
 - [This book about algoritms and optimization](https://algorithmsbook.com/optimization/files/optimization.pdf)
 - [This simulation tool](https://www.anylogic.com/)
 
-
 ## Random
 ### Kule ting:
 - ![GIS](https://www.admitnetwork.org/wp-content/uploads/2015/09/Capture9.png)
